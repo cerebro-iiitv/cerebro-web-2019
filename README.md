@@ -10,10 +10,10 @@
 </a> -->
 
 <a href="https://travis-ci.org/cerebro-iiitv/cerebro-web">
-    <img src="https://img.shields.io/travis/cerebro-iiitv/cerebro-web/master.svg?style=for-the-badge" align="center">
+    <img src="https://img.shields.io/travis/cerebro-iiitv/cerebro-web-2019/master.svg?style=for-the-badge" align="center">
 </a>
 <a href="https://github.com/cerebro-iiitv/cerebro-web/issues">
-    <img src="https://img.shields.io/github/issues/cerebro-iiitv/cerebro-web.svg?style=for-the-badge" align="center">
+    <img src="https://img.shields.io/github/issues/cerebro-iiitv/cerebro-web-2019.svg?style=for-the-badge" align="center">
 </a>
 </p>
 <hr>
