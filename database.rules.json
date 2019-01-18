@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "events": {
+      ".write": "auth != null",
+      ".read": "true"
+    },
+    "users": {
+      ".write": "auth != null",
+      ".read": "auth != null"
+    },
+    "team": {
+      ".read": "true",
+      ".write": "false"
+    }
+  }
+}
