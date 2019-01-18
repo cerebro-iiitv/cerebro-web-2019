@@ -24,3 +24,4 @@ yarn-error.log*
 firebase-debug.log
 package-lock.json
 .firebase/
+.netlify/
