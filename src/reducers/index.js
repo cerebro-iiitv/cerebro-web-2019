@@ -1,3 +1,13 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import { authReducer } from './authReducer';
+import { eventReducer } from './eventReducer';
+import { userPhoneReducer } from './userPhoneReducer';
+import { teamReducer } from './teamReducer';
+
+export default combineReducers({
+    auth: authReducer,
+    event: eventReducer,
+    userPhone: userPhoneReducer,
+    team: teamReducer
+});
