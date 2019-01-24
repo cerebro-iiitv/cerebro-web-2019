@@ -1,8 +1,8 @@
 export const actionTypes = {
-    SIGN_IN_DONE: 'AUTH.SIGN_IN.DONE',
-    SIGN_OUT_DONE: 'AUTH.SIGN_OUT.DONE'
+    AUTH_SIGN_IN: 'AUTH_SIGN_IN',
+    AUTH_SIGN_OUT: 'AUTH_SIGN_OUT'
 };
 
-export const signedIN = user => dispatch => dispatch({type: actionTypes.SIGN_IN_DONE, user});
+export const signedIN = user => dispatch => dispatch({type: actionTypes.AUTH_SIGN_IN, user});
 
-export const signedOut = () => dispatch => dispatch({type: actionTypes.SIGN_OUT_DONE});
+export const signedOut = () => dispatch => dispatch({type: actionTypes.AUTH_SIGN_OUT});

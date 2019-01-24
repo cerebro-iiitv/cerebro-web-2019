@@ -3,12 +3,12 @@ import * as firebase from 'firebase';
 import { getState } from '../store';
 
 export const actionTypes = {
-	LOAD_EVENTS_DONE: 'EVENTS.LOAD.DONE',
-	EVENT_REGISTERED: 'EVENTS.REGISTRATION.REGISTERED',
-	EVENT_UNREGISTERED: 'EVENTS.REGISTRATION.UNREGISTERED'
+	LOAD_EVENTS: 'LOAD_EVENTS',
+	EVENT_REGISTERED: 'EVENT_REGISTERED',
+	EVENT_UNREGISTERED: 'EVENT_UNREGISTERED'
 };
 
-export const loadEvents = events => dispatch => dispatch({ type: actionTypes.LOAD_EVENTS_DONE, events });
+export const loadEvents = events => dispatch => dispatch({ type: actionTypes.LOAD_EVENTS, events });
 
 export const registerToEvent = event => dispatch => {
 	let user = getState().auth.user;
