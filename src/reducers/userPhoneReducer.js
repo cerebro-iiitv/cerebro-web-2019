@@ -1,4 +1,4 @@
-import { actionTypes } from '../actions/userPhoneReducer';
+import { actionTypes } from '../actions/userPhoneActions';
 
 const initialState = { phone: null };
 
