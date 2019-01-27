@@ -3,6 +3,6 @@ export const actionTypes = {
     AUTH_SIGN_OUT: 'AUTH_SIGN_OUT'
 };
 
-export const signedIN = user => dispatch => dispatch({type: actionTypes.AUTH_SIGN_IN, user});
+export const signedIn = user => dispatch => dispatch({type: actionTypes.AUTH_SIGN_IN, user});
 
 export const signedOut = () => dispatch => dispatch({type: actionTypes.AUTH_SIGN_OUT});
