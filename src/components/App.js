@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import * as firebase from 'firebase';
-import { getState, getStore } from '../store';
+import { getStore } from '../store';
 import { fetchUser } from '../actions/authActions';
 import { loadEvents } from '../actions/eventActions';
 
@@ -18,6 +17,7 @@ import requiresAuth from './requiresAuth';
 
 import '../sass/main.scss';
 
+getStore();
 class App extends Component {
 	componentDidMount() {
 		this.props.fetchUser();
