@@ -1,0 +1,118 @@
+.navbar {
+	height: 7rem;
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	z-index: 20000;
+	background-color: $background-color;
+
+	a {
+		display: inline-block;
+		color: rgba($color-primary, 0.9);
+		font-weight: 800;
+		letter-spacing: 1px;
+		text-decoration: none;
+		margin: 0 2.3rem;
+		text-transform: uppercase;
+		transition: 0.1s linear;
+		border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
+		padding-bottom: 0.4rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:hover {
+			color: rgba(lighten($color-primary, 10%), 1);
+			border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+		}
+
+		&.active {
+			color: $color-primary;
+			border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+		}
+	}
+
+	#main-navbar {
+		display: block;
+
+		@media screen and (max-width: 840px) {
+			display: none;
+		}
+	}
+
+	#drawer-button {
+		display: none;
+		margin-left: 2rem;
+
+		span {
+			color: white;
+			font-size: 2.8rem;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		@media screen and (max-width: 840px) {
+			display: block;
+		}
+	}
+
+	#black-background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1000000;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: none;
+	}
+
+	.black-background-visible {
+		display: block !important;
+	}
+
+	#drawer {
+		position: fixed;
+		width: 25rem;
+		/* background-color: rgb(240, 240, 240); */
+		background-color: $background-color;
+		height: 100%;
+		bottom: 0;
+		top: 0;
+		left: -25rem;
+		padding: 2rem 1rem;
+		display: flex;
+		flex-flow: column;
+		transition: 0.15s ease-in;
+		z-index: 2000000;
+
+		a {
+			margin: 1rem 0rem;
+			display: block;
+			z-index: 3000000;
+			border-bottom: none;
+			border-left: 0.5rem solid rgba(0, 0, 0, 0);
+			padding: 0.4rem 0rem 0.4rem 1rem;
+			color: $color-primary;
+
+			&:hover {
+				border-left: 0.5rem solid rgba(white, 0.85);
+			}
+		}
+
+		.active {
+			border-left: 0.5rem solid rgba(white, 0.85);
+		}
+	}
+
+	.drawer-visible {
+		left: 0rem !important;
+	}
+}

@@ -1,57 +1,194 @@
 import React from 'react';
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import '../styles/team.css';
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const Team = props => (
-    <div className="team-section">
-        <div uk-grid="true" className="uk-grid-large uk-child-width-expand@s">
-            {
-                props.team.members.map((member, idx) => (
-                    <div className="uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l uk-margin-large-top uk-text-center" key={ idx } >
-                        <img
-                            src={ member.img ? member.img : './fest-logo.png' }
-                            className="uk-thumbnail uk-border-circle"
-                            alt={ member.name }
-                        />
-                        <div className="uk-margin-top">{ member.name }</div>
-                        <div>
-                            [ <span className="primary-color">{ props.team.name }</span> ]
-                        </div>
-                        <div className="uk-margin-left">
-                            {
-                                member.links.github && (
-                                    <a href={ member.links.github } target="_blank" className="uk-margin-right team-ext">
-                                        <FaGithub />
-                                    </a>
-                                )
-                            }
-                            {
-                                member.links.linkedin && (
-                                    <a href={ member.links.linkedin } target="_blank" className="uk-margin-right team-ext">
-                                        <FaLinkedin />
-                                    </a>
-                                )
-                            }
-                            {
-                                member.links.twitter && (
-                                    <a href={ member.links.twitter } target="_blank" className="uk-margin-right team-ext">
-                                        <FaTwitter />
-                                    </a>
-                                )
-                            }
-                            {
-                                member.links.facebook && (
-                                    <a href={ member.links.facebook } target="_blank" className="uk-margin-right team-ext">
-                                        <facebook />
-                                    </a>
-                                )
-                            }
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-        <hr className="separator" />
-    </div>
-);
+const Team = () => {
+	return (
+		<div className="flex-container">
+			<div className="flex-item1">
+				<h1 className="heading--primary"> Tech Team </h1>
+				<ul>
+					<li className="team--detail">
+						Indian Institution of Information Technology, Vadodara (IIIT-V) is one of the newly formed IIIT
+					</li>
+					<li className="team--detail">
+						Partnership (PPP) model. The partners in this project are Government of India, Government of Gujarat,
+						Gujarat Energy Research and Management Institute, Gujarat State Fertilizers and
+					</li>
+					<li className="team--detail">
+						Chemicals Ltd. and Tata Consultancy Services. Cerebro is the Annual Technical Festival of Indian Institute
+						of Information Technology, Vadodara held in March. It is entirely organized by the
+					</li>
+					<li className="team--detail">
+						creativity and intelligence. The festival aims to bring together great minds through various activities like
+						Technical Workshops, events, talks and exhibitions.
+					</li>
+				</ul>
+			</div>
+			<div className="flex-item2">
+				<div className="wrapper">
+					<ul className="panels">
+						<li>
+							<div className="front">
+								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+							</div>
+							<div className="back">
+								<h4> Piyush Pawar</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div className="front">
+								<img src="https://avatars3.githubusercontent.com/u/25260334?v=4" />
+							</div>
+							<div className="back">
+								<h4> Shubham Singh</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/singhshubham98" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/singhshubham98" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/singhshubham98" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div className="front">
+								<img src="https://avatars3.githubusercontent.com/u/27884543?v=4" />
+							</div>
+							<div className="back">
+								<h4> Piyush Pawar</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div className="front">
+								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+							</div>
+							<div className="back">
+								<h4> Piyush Pawar</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div className="front">
+								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+							</div>
+							<div className="back">
+								<h4> Piyush Pawar</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div className="front">
+								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+							</div>
+							<div className="back">
+								<h4> Piyush Pawar</h4>
+								<h6>Web team</h6>
+								<ul>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaGithub />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaFacebook />
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/PiyushPawar17" target="_blanck">
+											<FaInstagram />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export default Team;

@@ -6,8 +6,8 @@ import { userPhoneReducer } from './userPhoneReducer';
 import { teamReducer } from './teamReducer';
 
 export default combineReducers({
-    auth: authReducer,
-    event: eventReducer,
-    userPhone: userPhoneReducer,
-    team: teamReducer
+	auth: authReducer,
+	event: eventReducer,
+	userPhone: userPhoneReducer,
+	team: teamReducer
 });

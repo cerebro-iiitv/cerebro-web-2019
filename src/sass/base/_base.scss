@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; // 10px
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $background-color;
+	color: $color-white;
+}
+
+.main {
+	padding-top: 7rem;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba($color-primary, 0.1);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  	background-color: $color-primary;
+  	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  	background-color: lighten($color-primary, 5%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  	background-color: darken($color-primary, 5%);
+}

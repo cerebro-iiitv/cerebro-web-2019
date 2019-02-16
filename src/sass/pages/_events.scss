@@ -1,0 +1,14 @@
+.events {
+	margin: 3rem 0;
+
+	h1 {
+		font-weight: 300;
+		font-size: 3.6rem;
+	}
+
+	&__events-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

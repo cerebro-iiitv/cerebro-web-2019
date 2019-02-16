@@ -1,31 +1,29 @@
-import React from 'react';
-import firebaseui from 'firebaseui';
-import * as firebase from 'firebase';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import FontAwesome from 'react-fontawesome';
 
-class SignInComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        if (!window.authUi) window.authUi = new firebaseui.auth.AuthUI(firebase.auth());
-    }
+import { signIn } from '../actions/authActions';
 
-    componentDidMount() {
-        let uiConfig = {
-            signInSuccessUrl: '#',
-            signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
-            signInFlow: 'popup'
-        };
+class Signin extends Component {
+	static contextTypes = {
+		router: PropTypes.object
+	};
 
-        // Init firebase ui widget
-        window.authUi.start('#firebaseui-auth-container', uiConfig);
-    }
-
-    render() {
-        return (
-            <div>
-                <div id="firebase-auth-container" />
-            </div>
-        );
-    }
+	render() {
+		return (
+			<button className="btn" onClick={this.props.signIn}>
+				<FontAwesome name="google" /> Sign In
+			</button>
+		);
+	}
 }
 
-export default SignInComponent;
+const mapStateToProps = ({ auth }) => {
+	return { auth };
+};
+
+export default connect(
+	mapStateToProps,
+	{ signIn }
+)(Signin);

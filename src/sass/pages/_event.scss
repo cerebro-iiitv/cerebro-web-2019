@@ -1,0 +1,66 @@
+.event {
+	margin: 3rem 0;
+
+	&__header {
+		margin: 5rem 0;
+		display: flex;
+		align-items: center;
+		font-size: 2.5rem;
+	}
+
+	&__header-logo {
+		margin-right: 5rem;
+
+		img {
+			width: 7rem;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		flex: 0 0 45%;
+		line-height: 3rem;
+		font-size: 1.8rem;
+
+		a {
+			display: inline-block;
+			font-size: 2.2rem;
+			color: $color-white;
+			margin: 4rem 0;
+		}
+	}
+
+	&__details {
+		line-height: 4.5rem;
+		margin-bottom: 8rem;
+	}
+
+	&__contact {
+		margin-bottom: 8rem;
+	}
+
+	&__rules {
+		flex: 0 0 50%;
+		padding-left: 5rem;
+		border-left: 3px solid $color-primary;
+	}
+
+	&__rule {
+		font-size: 1.8rem;
+		list-style: none;
+		margin-bottom: 2rem;
+
+		&::before {
+			content: '\2022';
+			color: $color-primary;
+			font-weight: bold;
+			display: inline-block;
+			width: 1rem;
+			margin-right: 1rem;
+		}
+	}
+}

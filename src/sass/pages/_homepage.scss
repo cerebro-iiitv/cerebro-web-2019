@@ -1,0 +1,21 @@
+.homepage {
+	&__logo-wrapper {
+		height: calc(100vh - 7rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__logo {
+		width: 55rem;
+	}
+
+	.homepage__logo-wrapper {
+		display: grid;
+	}
+
+	.homepage__logo {
+		max-width: 100%;
+		padding: 3%;
+	}
+}

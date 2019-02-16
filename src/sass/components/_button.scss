@@ -1,0 +1,16 @@
+.btn {
+	background-color: $background-color;
+	color: $color-primary;
+	padding: 0.5em 2em;
+	border: 1px solid $color-primary;
+	border-radius: 3px;
+	font-size: 1.6rem;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-family: 'Source Sans Pro', sans-serif;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white;
+	}
+}

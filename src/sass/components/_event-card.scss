@@ -1,0 +1,35 @@
+.event-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 0 0 30%;
+	margin-right: 2%;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	border-radius: 3px;
+	background-color: $background-color-2;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	min-width: 25rem;
+
+	&__image {
+		width: 30%;
+		margin: 1rem auto;
+	}
+
+	&__event-name {
+		font-size: 2.8rem;
+		font-weight: 300;
+		margin: 2rem 0;
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		margin: 0 0 3rem 0;
+		flex: 1;
+	}
+
+	&:hover {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+}

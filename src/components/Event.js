@@ -1,105 +1,105 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import _ from 'lodash';
+import { registerForEvent, unregisterFromEvent } from '../actions/eventActions';
 
-import { registerToEvent, unregisterFromEvent } from '../actions/eventActions';
+import CSGOLogo from '../img/csgo-logo.svg';
 
 class Event extends React.Component {
-    componentDidMount() {
-        document.body.scrollTo = 0;
-    }
-
-    render() {
-        let eventId = this.props.match.params.id;
-        if (this.props.event.events.length <= eventId) {
-            return <div>Loading</div>;
-        }
-        let event = this.props.event.events[eventId];
-        let isRegistered = event.participants && this.props.user && _.some(Object.keys(event.participants), i => i === this.props.user.uid);
-
-        return (
-            <div className="uk-container uk-margin-large-top">
-                <div className="uk-grid-large uk-child-width-expand@s">
-                    <div className="uk-width-1-2@s">
-                        <img src={ event.img ? event.img : './fest-logo.png' } />
-                        <div className="uk-flex uk-flex-center">
-                            <div>
-                                {
-                                    this.props.user ? (
-                                        isRegistered ? (
-                                            <button className="unregister" onClick={ () => this.props.unregisterFromEvent(event)} disabled>
-                                                Unregister
-                                            </button>
-                                        ) : (
-                                            <button className="register" onClick={ () => this.props.registerToEvent(event) } disabled>
-                                                Register
-                                            </button>
-                                        )
-                                    ) : (
-                                        'Please log in to register!'
-                                    )
-                                }
-                            </div>
-                            <button className="uk-margin-left" onClick={ () => this.props.history.push('/') }>
-                                {' '}
-                                Back to Events
-                            </button>
-                        </div>
-                    </div>
-                    <div className="uk-width-1-2@s">
-                        <div className="event-name">{ event.name }</div>
-                        <div className="primary-color uk-margin-top">PRIZE WORTH: <b>{ event["prize-worth"] }</b></div>
-                        <div className="primary-color uk-margin-small-top">TEAM SIZE: <b>{ event["team-size"] }</b></div>
-                        <div className="primary-color uk-margin-small-top">VENUE: <b>{ event["venue"] }</b></div>
-                        <div className="primary-color uk-margin-small-top">DATE: <b>{ event["start-time"].slice(0, 11) }</b></div>
-                        <div className="uk-margin-large-top">
-                            <span className="contacts">Contacts:</span>
-                            <div className="uk-margin-top">
-                                {
-                                    Object.keys(event.contact).map(role => (
-                                        <div className="uk-flex uk-flex-between" key={ role }>
-                                            <div>
-                                            { event.contact[role].name } ({ event.contact[role].role })
-                                            </div>
-                                            <div className="primary-color">{ event.contact[role].phone }</div>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        </div>
-                        <p className="uk-margin-large-top">{ event.description }</p>
-                        <div className="uk-margin-large-top">
-                            <div className="rules">Rules</div>
-                            <ul className="rule-ul">
-                                {
-                                    event.rules.map((rule, idx) => (
-                                        <li
-                                            className="uk-margin-small-top ruli-li"
-                                            key={ idx }
-                                            dangerouslySetInnerHTML={{ __html: rule }}
-                                        />
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+	render() {
+		const {
+			event: { events },
+			registerForEvent,
+			unregisterFromEvent,
+			auth,
+			match
+		} = this.props;
+		const eventId = match.params.id;
+		const eventDetails = events[eventId];
+		if (events.loadingEvents) return <div>Loading</div>;
+		if (eventId > events.length) return <div>Invalid!</div>;
+		const registered = eventDetails.participants ? eventDetails.participants[auth.uid] : false;
+		return (
+			<main className="event">
+				<div className="container">
+					<Link to="/">
+						<button className="btn">Back</button>
+					</Link>
+					<section className="event__header">
+						<div className="event__header-logo">
+							<img src={eventDetails.img} alt="Logo" />
+						</div>
+						<div className="event__header-name">{eventDetails.name}</div>
+					</section>
+					<section className="event__content">
+						<div className="event__info">
+							<p>{eventDetails.description}</p>
+							{!auth && <a href="#">Sign In to Register</a>}
+							{auth && !registered && (
+								<button className="btn" onClick={() => registerForEvent(eventDetails)}>
+									Register
+								</button>
+							)}
+							{auth && registered && (
+								<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
+									Unregister
+								</button>
+							)}
+							<div className="event__details">
+								<p>
+									<span className="paragraph__highlight">Prizes Worth:</span> {eventDetails['prize-worth']}
+								</p>
+								<p>
+									<span className="paragraph__highlight">Team Size:</span> {eventDetails['team-size']}
+								</p>
+								<p>
+									<span className="paragraph__highlight">Venue:</span> {eventDetails.venue}
+								</p>
+								{/* <p> Uncomment this later
+									<span className="paragraph__highlight">Date:</span> {eventDetails['start-date']} to {eventDetails['end-date']}
+								</p> */}
+								<p>
+									<span className="paragraph__highlight">Time:</span> {eventDetails['start-time']} to{' '}
+									{eventDetails['end-time']}
+								</p>
+							</div>
+							<div className="event__contact">
+								<h2 className="heading--secondary">Contact</h2>
+								{eventDetails.contact.map(user => (
+									<p key={user}>
+										{user.name} (+91 {user.phone}) - {user.role}
+									</p>
+								))}
+							</div>
+						</div>
+						<div className="event__rules">
+							<h2 className="heading--secondary">Rules</h2>
+							<ul>
+								{eventDetails.rules.map(rule => (
+									<li key={rule} className="event__rule">
+										{rule}
+									</li>
+								))}
+							</ul>
+						</div>
+					</section>
+				</div>
+			</main>
+		);
+	}
 }
 
 const mapStateToProps = state => {
-    return {
-        event: state.event,
-        user: state.auth.user
-    };
+	return {
+		event: state.event,
+		auth: state.auth
+	};
 };
 
 export default connect(
-    mapStateToProps,
-    {
-        registerToEvent,
-        unregisterFromEvent
-    }
+	mapStateToProps,
+	{
+		registerForEvent,
+		unregisterFromEvent
+	}
 )(Event);

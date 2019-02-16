@@ -1,0 +1,319 @@
+.my-events {
+	height: calc(100vh - 7rem);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1040px;
+	margin: auto;
+
+	@media screen and (max-width: 1230px) {
+		width: 840px;
+	}
+
+	@media screen and (max-width: 940px) {
+		flex-flow: column;
+		overflow-y: scroll;
+		height: fit-content;
+	}
+
+	@media screen and (max-width: 840px) {
+		width: 90%;
+	}
+
+	&__user-profile {
+		width: 275px;
+		box-sizing: border-box;
+		margin-right: 30px;
+
+		@media screen and (max-width: 1230px) {
+			width: 225px;
+		}
+
+		@media screen and (max-width: 940px) {
+			width: 450px;
+			margin-bottom: 50px;
+			margin-top: 50px;
+			margin-right: 0px;
+		}
+
+		@media screen and (max-width: 512px) {
+			width: 100%;
+		}
+
+		.user-data {
+			background-color: white;
+			color: $color-primary;
+			height: fit-content;
+			overflow: hidden;
+			border-radius: 5px;
+			margin-bottom: 30px;
+			box-shadow: 2px 2px 30px black;
+
+			@media screen and (max-width: 940px) {
+				display: flex;
+				flex-flow: row;
+				width: 450px;
+				justify-content: center;
+			}
+
+			@media screen and (max-width: 512px) {
+				width: 100%;
+			}
+
+			@media screen and (max-width: 430px) {
+				display: flex;
+				flex-flow: column;
+				width: 100%;
+				justify-content: center;
+			}
+
+			div {
+				height: 275px;
+				width: 100%;
+				position: relative;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				@media screen and (max-width: 1230px) {
+					height: 225px;
+				}
+
+				@media screen and (max-width: 940px) {
+					width: 225px;
+				}
+
+				@media screen and (max-width: 512px) {
+					width: 50%;
+					padding-bottom: 50%;
+				}
+
+				@media screen and (max-width: 430px) {
+					width: 100%;
+					padding-bottom: 100%;
+				}
+			}
+
+			.user-profile-wrapper {
+				padding: 10px 10px 20px 10px;
+				height: fit-content;
+
+				@media screen and (max-width: 1230px) {
+					padding: 12px 12px 30px 12px;
+				}
+
+				h1 {
+					font-size: 2.8em;
+					margin-bottom: 20px;
+
+					@media screen and (max-width: 1230px) {
+						font-size: 2.4em;
+					}
+				}
+
+				p {
+					font-size: 1.8em;
+					margin-bottom: 0px;
+
+					@media screen and (max-width: 1230px) {
+						font-size: 1.6em;
+					}
+				}
+			}
+		}
+
+		.user-contact {
+			box-sizing: border-box;
+			width: 100%;
+			form {
+				width: 100%;
+				box-sizing: border-box;
+				display: flex;
+
+				input[type='text'] {
+					border-top-left-radius: 5px;
+					width: calc(100% - 75px);
+					border-bottom-left-radius: 5px;
+					padding: 10px;
+					font-size: 1.8em;
+					border: none;
+					color: $color-primary;
+					font-weight: 500;
+					background-color: white;
+					display: inline-block;
+					box-sizing: border-box;
+				}
+
+				input[type='submit'] {
+					width: 75px;
+					display: block;
+					background-color: $color-primary;
+					color: white;
+					font-weight: 800;
+					padding: 10px 18px;
+					border: 0px solid $color-primary;
+					transition: 0.1s ease-in;
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+
+					&:hover {
+						cursor: pointer;
+						background-color: lighten($color-primary, 2%);
+					}
+
+					&:active {
+						background-color: darken($color-primary, 2%);
+					}
+				}
+			}
+		}
+	}
+
+	&__events-table-wrapper {
+		width: calc(100% - 275px);
+		box-sizing: border-box;
+		overflow: hidden;
+
+		@media screen and (max-width: 1230px) {
+			width: calc(100% - 225px);
+		}
+
+		@media screen and (max-width: 840px) {
+			width: 100%;
+			overflow-x: scroll;
+		}
+
+		.events-table {
+			@media screen and (max-width: 840px) {
+				width: 600px;
+			}
+
+			h1.section-title {
+				font-size: 3.8em;
+				color: $color-primary;
+				font-weight: 500;
+				margin-bottom: 10px;
+
+				@media screen and (max-width: 1230px) {
+					font-size: 3.5em;
+				}
+
+				@media screen and (max-width: 940px) {
+					text-align: center;
+				}
+
+				@media screen and (max-width: 940px) {
+					text-align: left;
+				}
+			}
+
+			table.my-events-table {
+				font-size: 2em;
+				width: 100%;
+				border-spacing: 0px;
+
+				@media screen and (max-width: 1230px) {
+					font-size: 1.8em;
+				}
+
+				@media screen and (max-width: 840px) {
+					font-size: 1.6em;
+				}
+
+				tbody {
+					max-height: 400px;
+					overflow-y: scroll;
+					overflow-x: hidden;
+					display: block;
+				}
+				thead tr,
+				tbody tr {
+					display: table;
+					width: 100%;
+					table-layout: fixed;
+				}
+
+				thead tr {
+					width: calc(100% - 1em);
+				}
+			}
+
+			table.my-events-table th {
+				text-align: left;
+				padding: 15px 10px;
+				margin: 0px !important;
+				border: 0px;
+				border-bottom: 2px solid $color-primary;
+			}
+
+			table.my-events-table td {
+				padding: 10px 10px;
+				border: 0px;
+				margin: 0px;
+			}
+
+			tr.data-row {
+				transition: 0.1s linear;
+			}
+
+			tr.data-row:nth-child(even) {
+				background-color: rgb(20, 20, 20);
+			}
+
+			tr.data-row:hover {
+				background-color: rgb(45, 45, 45);
+				border-color: rgb(45, 45, 45);
+			}
+
+			.td-no {
+				width: 10%;
+				box-sizing: border-box;
+				text-align: center !important;
+
+				@media screen and (max-width: 840px) {
+					width: 25px;
+					box-sizing: border-box;
+				}
+			}
+
+			.td-eventname {
+				width: 40%;
+				box-sizing: border-box;
+
+				a {
+					text-decoration: none;
+				}
+
+				@media screen and (max-width: 840px) {
+					width: 180px;
+				}
+			}
+
+			.td-starts {
+				width: 30%;
+				box-sizing: border-box;
+
+				@media screen and (max-width: 840px) {
+					width: 110px;
+				}
+			}
+
+			.td-action {
+				width: 20%;
+				box-sizing: border-box;
+				text-align: center !important;
+
+				@media screen and (max-width: 840px) {
+					width: 35px;
+				}
+
+				span {
+					transition: 0.1s ease-in;
+					&:hover {
+						color: lighten(red, 10%);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

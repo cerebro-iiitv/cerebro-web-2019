@@ -1,41 +1,41 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-class About extends React.Component {
-    componentDidMount() {
-        document.body.scrollTop = 0;
-    }
+import Photo from '../img/college.jpg';
 
-    render() {
-        return (
-            <div className="uk-container"  >
-                <div className="uk-margin-large-top">
-                    <div className="about-title">About Fest</div>
-                    <p>
-                        <span className="primary-color">Indian Institute of Information Technology Vadodara</span> (IIIT-V) is
-                        established by the Ministry of Human Resource Development (<span className="primary-color">MHRD</span>),
-                        Government Of India under Public Private Partnership (PPP) as
-                        Institute of National Importance with a view to develop new knowledge
-                        in information technology and to provide manpower of global standards
-                        for the information technology industry and to provide for certain other
-                        matters connected with such institutions or incidental thereto.
-                        The partners in this project are Government Of India, Government of Gujarat,
-                        Gujarat Energy Research and Management Institute, Gujarat State Fertilizers
-                        and Chemicals and Tata Consultancy Services.
-                    </p>
-                    <p>
-                        <span className="primary-color">Cerebro</span> is the{' '}
-                        <span className="primary-color">Annual Technical Festival</span> of Indian Institute of Information
-                        Technology, Vadodara held in <span className="primary-color">March</span>. It is entirely organized by the{' '}
-                        <span className="primary-color">Technical Society of IIIT, Vadodara</span> and serves as a platform for
-                        technophiles to showcase their creativity and intelligence. The festival aims to bring together great minds
-                        through various activities like <span className="primary-color">Technical & Literary workshops, events, talks</span>{' '}
-                        and <span className="primary-color">exhibitions</span>.
-                    </p>
-                </div>
-            </div>
-        );
-    }
-}
+const About = () => (
+	<div className="container">
+		<main className="about">
+			<div className="about__contact">
+				<div className="about__contact-card">
+					<img src={Photo} className="about__photo" />
+					<h2 className="heading--secondary">IIIT Vadodara</h2>
+					<p className="about__address">
+						Address: <span>c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat-382028</span>
+					</p>
+				</div>
+			</div>
+			<div className="about__info">
+				<h1 className="heading--primary">About Us</h1>
+				<p className="paragraph">
+					<span className="paragraph__highlight">Indian Institution of Information Technology, Vadodara</span> (IIIT-V)
+					is one of the newly formed IIIT by the Ministry of Human Resource Development (
+					<span className="paragraph__highlight">MHRD</span>) , Government of India under Public Private Partnership
+					(PPP) model. The partners in this project are Government of India, Government of Gujarat, Gujarat Energy
+					Research and Management Institute, Gujarat State Fertilizers and Chemicals Ltd. and Tata Consultancy Services.
+				</p>
+				<p className="paragraph">
+					<span className="paragraph__highlight">Cerebro</span> is the{' '}
+					<span className="paragraph__highlight">Annual Technical Festival</span> of Indian Institute of Information
+					Technology, Vadodara held in <span className="paragraph__highlight">March</span>. It is entirely organized by
+					the <span className="paragraph__highlight">Technical Society of IIIT, Vadodara</span> and serves as a platform
+					for technophiles to showcase their creativity and intelligence. The festival aims to bring together great
+					minds through various activities like{' '}
+					<span className="paragraph__highlight">Technical Workshops, events, talks</span> and{' '}
+					<span className="paragraph__highlight">exhibitions</span>.
+				</p>
+			</div>
+		</main>
+	</div>
+);
 
 export default About;
