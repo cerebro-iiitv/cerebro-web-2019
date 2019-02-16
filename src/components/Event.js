@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerForEvent, unregisterFromEvent } from '../actions/eventActions';
-
-import CSGOLogo from '../img/csgo-logo.svg';
+import SignIn from './SignIn';
 
 class Event extends React.Component {
 	render() {
 		const {
-			event: { events },
+			event: { events, loadingEvents },
 			registerForEvent,
 			unregisterFromEvent,
 			auth,
@@ -16,9 +15,10 @@ class Event extends React.Component {
 		} = this.props;
 		const eventId = match.params.id;
 		const eventDetails = events[eventId];
-		if (events.loadingEvents) return <div>Loading</div>;
+		if (loadingEvents && !eventDetails) return <div>Loading</div>;
 		if (eventId > events.length) return <div>Invalid!</div>;
-		const registered = eventDetails.participants ? eventDetails.participants[auth.uid] : false;
+		
+		const registered = eventDetails && eventDetails.participants && auth ? eventDetails.participants[auth.uid] : false;
 		return (
 			<main className="event">
 				<div className="container">
@@ -34,7 +34,8 @@ class Event extends React.Component {
 					<section className="event__content">
 						<div className="event__info">
 							<p>{eventDetails.description}</p>
-							{!auth && <a href="#">Sign In to Register</a>}
+							<br/>
+							{!auth && <SignIn/>}
 							{auth && !registered && (
 								<button className="btn" onClick={() => registerForEvent(eventDetails)}>
 									Register
@@ -45,6 +46,7 @@ class Event extends React.Component {
 									Unregister
 								</button>
 							)}
+							<br/>
 							<div className="event__details">
 								<p>
 									<span className="paragraph__highlight">Prizes Worth:</span> {eventDetails['prize-worth']}

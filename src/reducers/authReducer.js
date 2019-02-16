@@ -1,5 +1,3 @@
-import { actionTypes } from '../actions/authActions';
-
 const initialState = {
 	signedIn: false,
 	user: null
