@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/team.css';
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Team = () => {
 	return (
@@ -30,24 +30,24 @@ const Team = () => {
 					<ul className="panels">
 						<li>
 							<div className="front">
-								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+								<img alt=""src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer">
 											<FaInstagram />
 										</a>
 									</li>
@@ -56,24 +56,24 @@ const Team = () => {
 						</li>
 						<li>
 							<div className="front">
-								<img src="https://avatars3.githubusercontent.com/u/25260334?v=4" />
+								<img alt="" src="https://avatars3.githubusercontent.com/u/25260334?v=4" />
 							</div>
 							<div className="back">
 								<h4> Shubham Singh</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/singhshubham98" target="_blanck">
+										<a href="https://github.com/singhshubham98" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/singhshubham98" target="_blanck">
+										<a href="https://github.com/singhshubham98" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/singhshubham98" target="_blanck">
+										<a href="https://github.com/singhshubham98" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>
@@ -82,24 +82,24 @@ const Team = () => {
 						</li>
 						<li>
 							<div className="front">
-								<img src="https://avatars3.githubusercontent.com/u/27884543?v=4" />
+								<img alt="" src="https://avatars3.githubusercontent.com/u/27884543?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>
@@ -108,24 +108,24 @@ const Team = () => {
 						</li>
 						<li>
 							<div className="front">
-								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+								<img alt="" src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>
@@ -134,24 +134,24 @@ const Team = () => {
 						</li>
 						<li>
 							<div className="front">
-								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+								<img alt="" src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>
@@ -160,24 +160,24 @@ const Team = () => {
 						</li>
 						<li>
 							<div className="front">
-								<img src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+								<img alt="" src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
 								<h6>Web team</h6>
 								<ul>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaGithub />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" target="_blanck">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>

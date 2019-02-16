@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Photo from '../img/college.jpg';
 
 const About = () => (
@@ -7,7 +6,7 @@ const About = () => (
 		<main className="about">
 			<div className="about__contact">
 				<div className="about__contact-card">
-					<img src={Photo} className="about__photo" />
+					<img alt="IIIT Vadodara Gandhinagar Campus" src={Photo} className="about__photo" />
 					<h2 className="heading--secondary">IIIT Vadodara</h2>
 					<p className="about__address">
 						Address: <span>c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat-382028</span>

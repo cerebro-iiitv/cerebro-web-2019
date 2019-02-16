@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Provider, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import * as firebase from 'firebase';
-
-import { getState, getStore } from '../store';
 import { fetchUser } from '../actions/authActions';
 import { loadEvents } from '../actions/eventActions';
 
@@ -12,15 +9,12 @@ import Social from './Social';
 import HomePage from './HomePage';
 import EventTimeline from './EventTimeline';
 import Event from './Event';
-import EventsList from './EventsList';
 import About from './About';
 import Team from './Team';
 import MyEvents from './MyEvents';
 import requiresAuth from './requiresAuth';
 
 import '../sass/main.scss';
-
-const store = getStore();
 
 class App extends Component {
 	componentDidMount() {

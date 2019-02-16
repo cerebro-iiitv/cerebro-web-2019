@@ -1,4 +1,4 @@
-import { todosRef, authRef, provider } from '../config/firebase';
+import { authRef, provider } from '../config/firebase';
 
 export const actionTypes = {
 	AUTH_SIGN_IN: 'AUTH_SIGN_IN',

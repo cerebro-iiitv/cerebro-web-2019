@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { unregisterFromEvent } from '../actions/eventActions';
 import { Link } from 'react-router-dom';
-import image from '../img/college.jpg';
-import trash from '../img/trash.svg';
-
 import FontAwesome from 'react-fontawesome';
 
 class MyEvents extends Component {
@@ -24,7 +21,7 @@ class MyEvents extends Component {
 						</div>
 					</div>
 					<div className="user-contact">
-						<form>
+						<form className="navbar">
 							<input type="text" placeholder="Mobile" />
 							<input type="submit" value="Save" />
 						</form>

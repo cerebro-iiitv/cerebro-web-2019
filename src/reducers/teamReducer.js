@@ -1,5 +1,3 @@
-import { actionTypes } from '../actions/teamActions';
-
 const initialState = { team: [] };
 
 export const teamReducer = (state = initialState, action) => {
