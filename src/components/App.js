@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import * as firebase from 'firebase';
+import { getState, getStore } from '../store';
 import { fetchUser } from '../actions/authActions';
 import { loadEvents } from '../actions/eventActions';
 
@@ -33,7 +35,7 @@ class App extends Component {
 							<Route exact path="/" component={HomePage} />
 							<Route exact path="/about" component={About} />
 							<Route exact path="/dashboard" component={requiresAuth(MyEvents)} />
-              <Route exact path="/timeline" component={EventTimeline} />
+              				<Route exact path="/timeline" component={EventTimeline} />
 							<Route exact path="/team" component={Team} />
 							<Route exact path="/events/:id" component={Event} />
 						</Switch>

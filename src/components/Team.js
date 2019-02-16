@@ -30,7 +30,7 @@ const Team = () => {
 					<ul className="panels">
 						<li>
 							<div className="front">
-								<img alt=""src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
+								<img alt="" src="https://avatars2.githubusercontent.com/u/25110253?v=4" />
 							</div>
 							<div className="back">
 								<h4> Piyush Pawar</h4>
@@ -42,12 +42,12 @@ const Team = () => {
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaFacebook />
 										</a>
 									</li>
 									<li>
-										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer">
+										<a href="https://github.com/PiyushPawar17" rel="noopener noreferrer" target="_blank">
 											<FaInstagram />
 										</a>
 									</li>
