@@ -8,6 +8,7 @@
 	cursor: pointer;
 	transition: all 0.3s;
 	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
 
 	&:hover {
 		background-color: $color-primary;
