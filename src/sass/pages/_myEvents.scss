@@ -1,10 +1,8 @@
 .my-events {
 	height: calc(100vh - 7rem);
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 1040px;
-	margin: auto;
+	justify-content: space-between;
+	margin: 5rem auto;
 
 	@media screen and (max-width: 1230px) {
 		width: 840px;
@@ -141,6 +139,7 @@
 					background-color: white;
 					display: inline-block;
 					box-sizing: border-box;
+					font-family: 'Source Sans Pro', sans-serif;
 				}
 
 				input[type='submit'] {
@@ -154,6 +153,9 @@
 					transition: 0.1s ease-in;
 					border-top-right-radius: 5px;
 					border-bottom-right-radius: 5px;
+					font-family: 'Source Sans Pro', sans-serif;
+					letter-spacing: 1px;
+					font-size: 1.6rem;
 
 					&:hover {
 						cursor: pointer;

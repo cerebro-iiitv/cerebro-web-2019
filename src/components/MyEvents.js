@@ -1,47 +1,72 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { unregisterFromEvent } from '../actions/eventActions';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
+import { unregisterFromEvent } from '../actions/eventActions';
+import { fetchUser } from '../actions/authActions';
+import { loadUserPhone, saveUserPhone } from '../actions/userPhoneActions';
+
 class MyEvents extends Component {
+	constructor(props) {
+		super(props);
+
+		this.addPhone = this.addPhone.bind(this);
+	}
+
+	componentDidMount() {
+		this.props.fetchUser();
+		if (this.props.auth.user) {
+			this.props.loadUserPhone();
+		}
+	}
+
+	addPhone(event) {
+		event.preventDefault();
+
+		this.props.saveUserPhone(this.refs.phone.value);
+	}
+
 	render() {
-		const { event, auth, unregisterFromEvent } = this.props;
+		const { event, auth, userPhone, unregisterFromEvent } = this.props;
 		if (event.loadingEvents) return <div>Loading</div>;
 		let registeredEvents;
 		registeredEvents = event.events.filter(event => Object.keys(event.participants || {}).includes(auth.uid));
 		return (
-			<div className="my-events">
-				<div className="my-events__user-profile" id="user-profile-main">
-					<div className="user-data">
-						<div style={{ backgroundImage: `url(${auth.photoURL})` }} />
-						<div className="user-profile-wrapper">
-							<h1>{auth.displayName}</h1>
-							<p>Mobile No. : 918273912</p>
+			<div className="container">
+				<div className="my-events">
+					<div className="my-events__user-profile" id="user-profile-main">
+						<div className="user-data">
+							<div className="my-events__user-image">
+								<img src={auth.photoURL} alt="User" />
+							</div>
+							<div className="user-profile-wrapper">
+								<h1>{auth.displayName}</h1>
+								<p>Mobile No. : {userPhone.phone}</p>
+							</div>
+						</div>
+						<div className="user-contact">
+							<form onSubmit={this.addPhone}>
+								<input type="text" placeholder="Mobile" ref="phone" />
+								<input type="submit" value="Save" />
+							</form>
 						</div>
 					</div>
-					<div className="user-contact">
-						<form className="navbar">
-							<input type="text" placeholder="Mobile" />
-							<input type="submit" value="Save" />
-						</form>
-					</div>
-				</div>
-				<div className="my-events__events-table-wrapper">
-					<div className="events-table">
-						<h1 className="section-title">Registered Events</h1>
-						<table className="my-events-table">
-							<thead>
-								<tr className="my-events-table-header">
-									<th className="td-no">#</th>
-									<th className="td-eventname">Event Name</th>
-									<th className="td-starts">Starts On</th>
-									<th className="td-action">Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								{registeredEvents
-									? registeredEvents.map((e, ind) => {
+					<div className="my-events__events-table-wrapper">
+						<div className="events-table">
+							<h1 className="section-title">Registered Events</h1>
+							<table className="my-events-table">
+								<thead>
+									<tr className="my-events-table-header">
+										<th className="td-no">#</th>
+										<th className="td-eventname">Event Name</th>
+										<th className="td-starts">Starts On</th>
+										<th className="td-action">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									{registeredEvents
+										? registeredEvents.map((e, ind) => {
 											return (
 												<tr className="data-row" key={ind + 1}>
 													<td className="td-no">{ind + 1}</td>
@@ -54,10 +79,11 @@ class MyEvents extends Component {
 													</td>
 												</tr>
 											);
-									  })
-									: null}
-							</tbody>
-						</table>
+										  })
+										: null}
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -68,11 +94,12 @@ class MyEvents extends Component {
 const mapStateToProps = state => {
 	return {
 		event: state.event,
-		auth: state.auth
+		auth: state.auth,
+		userPhone: state.userPhone
 	};
 };
 
 export default connect(
 	mapStateToProps,
-	{ unregisterFromEvent }
+	{ unregisterFromEvent, loadUserPhone, saveUserPhone, fetchUser }
 )(MyEvents);

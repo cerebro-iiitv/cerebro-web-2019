@@ -11,7 +11,7 @@ import HomePage from './HomePage';
 import EventTimeline from './EventTimeline';
 import Event from './Event';
 import About from './About';
-import Team from './Team';
+import Teams from './Teams';
 import MyEvents from './MyEvents';
 import requiresAuth from './requiresAuth';
 
@@ -35,8 +35,8 @@ class App extends Component {
 							<Route exact path="/" component={HomePage} />
 							<Route exact path="/about" component={About} />
 							<Route exact path="/dashboard" component={requiresAuth(MyEvents)} />
-              				<Route exact path="/timeline" component={EventTimeline} />
-							<Route exact path="/team" component={Team} />
+							<Route exact path="/timeline" component={EventTimeline} />
+							<Route exact path="/team" component={Teams} />
 							<Route exact path="/events/:id" component={Event} />
 						</Switch>
 					</div>

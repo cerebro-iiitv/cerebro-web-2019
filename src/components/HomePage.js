@@ -1,6 +1,6 @@
 import React from 'react';
 import EventsList from '../components/EventsList';
-import Logo from '../img/aashutoshrathiallstackdeveloper.png';
+import Logo from '../img/anshumanvisallstackdeveloper.png';
 
 const HomePage = () => (
 	<main className="homepage">
