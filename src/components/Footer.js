@@ -8,9 +8,9 @@ class Footer extends Component {
 				<div className="footer">
 					<div className="links">
 						<h2 className="footer-header">Links</h2>
-						<div className="footer-item">Home</div>
-						<div className="footer-item">Institute Site</div>
-						<div className="footer-item">About</div>
+						<div className="footer-item"><a href="/">Home</a></div>
+						<div className="footer-item"><a href="https://iiitv.ac.in">Institute Site</a></div>
+						<div className="footer-item"><a href="/about">About</a></div>
 					</div>
 					<div className="contact">
 						<h2 className="footer-header">Contact</h2>

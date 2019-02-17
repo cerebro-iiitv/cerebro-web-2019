@@ -56,14 +56,14 @@ const EventTimeline = () => (
     dateText="2019-03-03 11:15"
   >
     <h3 style={hStyle}>Hired!</h3>
-    <h4 style={h4Style}>-</h4>
+    <h4 style={h4Style}>Hired is an interesting competition that simulates the actual job interview scenario.The event takes place in three phases which will test the reasoning/logical skills and overall personality of the participant. Come participate if you think you have what it takes to get hired!</h4>
     <p>
       The event tests students based on their aptitude skills, public speaking, and vision.
     </p>
   </TimelineItem>
   <TimelineItem
     key="004"
-    dateText="2019-03-01 13:30"
+    dateText="2019-03-03 13:30"
   >
     <h3 style={hStyle}>PUBG Mobile</h3>
     <h4 style={h4Style}>In the midst of chaos, there is also an opportunity.</h4>
