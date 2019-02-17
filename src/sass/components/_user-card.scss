@@ -23,7 +23,7 @@
 		left: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
 		width: 25rem;
 		height: 25rem;
 		background-color: rgba($color-black, 0.6);
@@ -38,11 +38,28 @@
 
 	&__username {
 		text-align: center;
-		font-size: 2.5rem;
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+
+	&__role {
+		font-size: 1.5rem;
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+		text-transform: uppercase;
 	}
 
 	&__social-icons {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+	}
+
+	&__twitter-icon {
+		margin-right: 1.2rem;
+	}
+
+	&__github-icon {
+		margin-right: 1.2rem;
 	}
 }

@@ -34,22 +34,9 @@ const EventTimeline = () => (
     <h3 style={hStyle}>Penumbera</h3>
     <h4 style={h4Style}>An event to bring out your mathematical and logical skills.</h4>
     <p>
-      Participants will be provided with a set of pure mathematical problems covering-
-      <ul>
-        <li>Number Theory</li>
-        <li>Combinatorics</li>
-        <li>Probability</li>
-        <li>Geometry</li>
-        <li>Discrete mathematics</li>
-      </ul> 
+      Participants will be provided with a set of pure mathematical problems covering Number Theory, Combinatorics, Probability, Geometry and Discrete mathematics.
     </p>
     <br></br>
-    <p>
-      There is another module of the event to test the general problem solving, pattern finding skills and finding hidden meanings in images. 
-      It will mainly focus on some encryption and cryptography based problems.
-      There will be 2 levels of the event and participants will be selected on the basis of time they take to complete the challenge. 
-      The question will be based on codes, ciphers, cryptogram, pattern finding and finding hidden meanings in images.
-    </p>
   </TimelineItem>
   <TimelineItem
     key="003"
@@ -135,7 +122,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="009"
     dateText="2019-03-04 10:30"
   >
     <h3 style={hStyle}>Vision</h3>
@@ -148,7 +135,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="010"
     dateText="2019-03-04 10:30"
   >
     <h3 style={hStyle}>Hired (Round 2)</h3>
@@ -158,7 +145,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="011"
     dateText="2019-03-04 11:00"
   >
     <h3 style={hStyle}>Ideathon</h3>
@@ -170,31 +157,18 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="002"
+    key="012"
     dateText="2019-03-04 13:30"
   >
     <h3 style={hStyle}>Penumbera (Round 2)</h3>
     <h4 style={h4Style}>An event to bring out your mathematical and logical skills.</h4>
     <p>
-      Participants will be provided with a set of pure mathematical problems covering-
-      <ul>
-        <li>Number Theory</li>
-        <li>Combinatorics</li>
-        <li>Probability</li>
-        <li>Geometry</li>
-        <li>Discrete mathematics</li>
-      </ul> 
+      Participants will be provided with a set of pure mathematical problems covering Number Theory, Combinatorics, Probability, Geometry and Discrete mathematics.
     </p>
     <br></br>
-    <p>
-      There is another module of the event to test the general problem solving, pattern finding skills and finding hidden meanings in images. 
-      It will mainly focus on some encryption and cryptography based problems.
-      There will be 2 levels of the event and participants will be selected on the basis of time they take to complete the challenge. 
-      The question will be based on codes, ciphers, cryptogram, pattern finding and finding hidden meanings in images.
-    </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="013"
     dateText="2019-03-04 14:45"
   >
     <h3 style={hStyle}>BotRun</h3>
@@ -206,7 +180,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="014"
     dateText="2019-03-04 14:45"
   >
     <h3 style={hStyle}>Hired (Round 3)</h3>
@@ -216,7 +190,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
   <TimelineItem
-    key="008"
+    key="015"
     dateText="2019-03-04 14:45"
   >
     <h3 style={hStyle}>The Tech Hunt</h3>

@@ -3,6 +3,10 @@
 		font-weight: 300;
 		margin: 3rem 0;
 		font-size: 3.5rem;
+		u {
+			border-bottom: 0.1rem solid $color-primary;
+			text-decoration: none;
+		}
 	}
 
 	&--secondary {

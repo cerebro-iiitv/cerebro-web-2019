@@ -8,7 +8,7 @@ const EventsList = props => {
 	return (
 		<div className="container">
 			<main className="events">
-				<h1>Events</h1>
+				<h1><u>Events</u></h1>
 				<div className="events__events-list">
 					{props.event.events.map((event, index) => (
 						<EventCard

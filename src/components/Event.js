@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerForEvent, unregisterFromEvent } from '../actions/eventActions';
 import SignIn from './SignIn';
+import Loaderx from './Loader';
 
 class Event extends React.Component {
 	render() {
@@ -15,7 +16,7 @@ class Event extends React.Component {
 		} = this.props;
 		const eventId = match.params.id;
 		const eventDetails = events[eventId];
-		if (loadingEvents && !eventDetails) return <div>Loading</div>;
+		if (loadingEvents && !eventDetails) return <Loaderx />;
 		if (eventId > events.length) return <div>Invalid!</div>;
 		
 		const registered = eventDetails && eventDetails.participants && auth ? eventDetails.participants[auth.uid] : false;

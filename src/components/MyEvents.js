@@ -15,14 +15,13 @@ class MyEvents extends Component {
 
 	componentDidMount() {
 		this.props.fetchUser();
-		if (this.props.auth.user) {
+		if (this.props.auth.uid) {
 			this.props.loadUserPhone();
 		}
 	}
 
 	addPhone(event) {
 		event.preventDefault();
-
 		this.props.saveUserPhone(this.refs.phone.value);
 	}
 

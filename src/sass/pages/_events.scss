@@ -4,6 +4,14 @@
 	h1 {
 		font-weight: 300;
 		font-size: 3.6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 4rem;
+		u {
+			border-bottom: 0.1rem solid $color-primary;
+			text-decoration: none;
+		}
 	}
 
 	&__events-list {

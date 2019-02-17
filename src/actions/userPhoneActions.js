@@ -8,10 +8,10 @@ export const actionTypes = {
 };
 
 export const saveUserPhone = number => dispatch => {
-	if (getState().auth.user) {
+	if (getState().auth.uid) {
 		firebase
 			.database()
-			.ref('/users/' + getState().auth.user.uid + '/phone')
+			.ref('/users/' + getState().auth.uid + '/phone')
 			.set(number, result => dispatch({ type: actionTypes.USER_SAVE_PHONE }));
 	} else {
 		dispatch({ type: actionTypes.USER_SAVE_PHONE });
@@ -21,9 +21,8 @@ export const saveUserPhone = number => dispatch => {
 export const loadUserPhone = () => dispatch => {
 	firebase
 		.database()
-		.ref('/users/' + getState().auth.user.uid + '/phone')
+		.ref('/users/' + getState().auth.uid + '/phone')
 		.on('value', snapshot => {
-			// console.log(getState().auth.user, 'asdasdadasdasda');
 			dispatch({ type: actionTypes.USER_LOAD_PHONE, phone: snapshot.val() });
 		});
 };

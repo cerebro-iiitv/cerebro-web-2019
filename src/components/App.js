@@ -12,6 +12,7 @@ import EventTimeline from './EventTimeline';
 import Event from './Event';
 import About from './About';
 import Teams from './Teams';
+import Footer from './Footer';
 import MyEvents from './MyEvents';
 import requiresAuth from './requiresAuth';
 
@@ -40,6 +41,7 @@ class App extends Component {
 							<Route exact path="/events/:id" component={Event} />
 						</Switch>
 					</div>
+					<Footer />
 				</div>
 			</BrowserRouter>
 		);

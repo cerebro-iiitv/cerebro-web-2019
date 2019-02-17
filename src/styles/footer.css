@@ -14,15 +14,15 @@
 }
 
 .footer-container {
-    border-top: 2px solid #0A72BA;
+    border-top: 2px solid #5EC9F8;
     line-height: 1.5;
-    padding: 20px;
+    padding: 0.5rem;
 }
 
 .links {
     width: 25%;
     padding: 1%;
-    line-height: 2.6;
+    line-height: 2;
 }
 
 .contact {
@@ -32,15 +32,25 @@
 }
 
 .footer-header {
-    color: #0A72BA;
+    color:#5EC9F8;
+    font-weight: 200;
+}
+
+.footer-border {
+    border-bottom: 0.1rem solid white;
+    text-decoration: none;
 }
 
 .header-color {
-    color: #0A72BA;
+    color: #5EC9F8;
 }
 
 .footer-item {
     font-size: 0.8em;
+}
+
+.footer-link {
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -53,7 +63,7 @@
     }
 
     .links {
-        width: 50%;
+        width: 80%;
     }
 
     .footer_logo {
@@ -62,6 +72,6 @@
     }
 
     .contact {
-        width: 50%;
+        width: 80%;
     }
 }

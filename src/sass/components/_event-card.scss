@@ -2,8 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	flex: 0 0 30%;
-	margin-right: 2%;
+	flex: 0 0 25%;
+	margin-right: 3%;
 	margin-bottom: 3rem;
 	padding: 2rem;
 	border-radius: 3px;
@@ -11,6 +11,7 @@
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	min-width: 25rem;
+	text-align: center;
 
 	&__image {
 		width: 30%;
