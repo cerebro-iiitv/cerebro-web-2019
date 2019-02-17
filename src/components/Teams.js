@@ -11,7 +11,7 @@ class Teams extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.team, 'ser');
+		// console.log(this.props.team, 'ser');
 		return (
 			<div className="container">
 				{this.props.team.team.map(team => (

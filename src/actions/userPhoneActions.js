@@ -23,7 +23,7 @@ export const loadUserPhone = () => dispatch => {
 		.database()
 		.ref('/users/' + getState().auth.user.uid + '/phone')
 		.on('value', snapshot => {
-			console.log(getState().auth.user, 'asdasdadasdasda');
+			// console.log(getState().auth.user, 'asdasdadasdasda');
 			dispatch({ type: actionTypes.USER_LOAD_PHONE, phone: snapshot.val() });
 		});
 };

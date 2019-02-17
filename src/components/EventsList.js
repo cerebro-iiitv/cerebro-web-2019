@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import Loaderx from './Loader';
 import EventCard from './EventCard';
 
 const EventsList = props => {
-	if (props.event.loadingEvents) return <div>Loading</div>;
+	if (props.event.loadingEvents) return <Loaderx/>;
 	return (
 		<div className="container">
 			<main className="events">

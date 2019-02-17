@@ -17,7 +17,7 @@ export const loadEvents = events => dispatch => {
 
 export const registerForEvent = event => dispatch => {
 	let user = getState().auth;
-	console.log(user);
+	// console.log(user);
 	if (!user) {
 		return;
 	}
@@ -35,8 +35,8 @@ export const registerForEvent = event => dispatch => {
 
 export const unregisterFromEvent = event => dispatch => {
 	let user = getState().auth.uid;
-	console.log(event);
-	console.log(user);
+	// console.log(event);
+	// console.log(user);
 	if (!user) {
 		return;
 	}

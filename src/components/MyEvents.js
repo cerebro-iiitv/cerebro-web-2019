@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
-
+import Loaderx from './Loader';
 import { unregisterFromEvent } from '../actions/eventActions';
 import { fetchUser } from '../actions/authActions';
 import { loadUserPhone, saveUserPhone } from '../actions/userPhoneActions';
@@ -10,7 +10,6 @@ import { loadUserPhone, saveUserPhone } from '../actions/userPhoneActions';
 class MyEvents extends Component {
 	constructor(props) {
 		super(props);
-
 		this.addPhone = this.addPhone.bind(this);
 	}
 
@@ -29,7 +28,7 @@ class MyEvents extends Component {
 
 	render() {
 		const { event, auth, userPhone, unregisterFromEvent } = this.props;
-		if (event.loadingEvents) return <div>Loading</div>;
+		if (event.loadingEvents) return <Loaderx/>;
 		let registeredEvents;
 		registeredEvents = event.events.filter(event => Object.keys(event.participants || {}).includes(auth.uid));
 		return (
