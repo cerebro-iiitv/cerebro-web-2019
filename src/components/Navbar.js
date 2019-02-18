@@ -38,13 +38,13 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar">
 				<div id="main-navbar" className="container">
-					<NavLink exact to="/">
+					<NavLink onClick={this.hideDrawer} exact to="/">
 						Home
 					</NavLink>
-					<NavLink to="/about">About</NavLink>
-					<NavLink to="/team">Team</NavLink>
-					<NavLink to="/timeline">Timeline</NavLink>
-					{auth && <NavLink to="/dashboard">My Events</NavLink>}
+					<NavLink onClick={this.hideDrawer} to="/about">About</NavLink>
+					<NavLink onClick={this.hideDrawer} to="/team">Team</NavLink>
+					<NavLink onClick={this.hideDrawer} to="/timeline">Timeline</NavLink>
+					{auth && <NavLink onClick={this.hideDrawer} to="/dashboard">My Events</NavLink>}
 					{auth ? (
 						<button className="btn" onClick={signOut}>
 							Sign Out
@@ -78,9 +78,9 @@ class Navbar extends Component {
 					<NavLink onClick={this.hideDrawer} to="/timeline">
 						Timeline
 					</NavLink>
-					<NavLink onClick={this.hideDrawer} to="/dashboard">
+					{auth && <NavLink onClick={this.hideDrawer} to="/dashboard">
 						My Events
-					</NavLink>
+					</NavLink>}
 					{auth ? (
 						<button className="btn" onClick={signOut}>
 							Sign Out
