@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setTeam } from '../actions/teamActions';
 
 import Team from './Team';
+import Loaderx from './Loader';
 
 class Teams extends React.Component {
 	componentDidMount() {
@@ -12,6 +13,7 @@ class Teams extends React.Component {
 
 	render() {
 		// console.log(this.props.team, 'ser');
+		if (this.props.team.loadingTeams) return <div id='team-loader'><Loaderx/></div>;
 		return (
 			<div className="container">
 				{this.props.team.team.map(team => (

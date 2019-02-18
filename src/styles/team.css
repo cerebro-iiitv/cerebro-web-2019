@@ -116,6 +116,15 @@ img {
 	visibility: visible;
 	animation: flip 0.3s 0.2s linear forwards reverse;
 }
+
+#team-loader {
+	height: 80vh;
+	widht: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 @keyframes flip {
 	0% {
 		transform: rotateY(0deg);
