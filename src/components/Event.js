@@ -6,6 +6,11 @@ import SignIn from './SignIn';
 import Loaderx from './Loader';
 
 class Event extends React.Component {
+
+	componentDidMount() {
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+	}
+
 	render() {
 		const {
 			event: { events, loadingEvents },

@@ -33,10 +33,27 @@ class Navbar extends Component {
 		} catch {}
 	};
 
+	componentDidMount() {
+		document.addEventListener('scroll', e => {
+			let elem = document.getElementById('navbar-container')
+			if (window.pageYOffset > 100) {
+				if (!elem.classList.contains('scrolled')) {
+					elem.classList.add('scrolled')
+				}
+			} else {
+				elem.classList.remove('scrolled')
+			}
+		})
+	}
+
+	componentDidUpdate() {
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+	}
+
 	render() {
 		const { auth, signOut } = this.props;
 		return (
-			<nav className="navbar">
+			<nav id='navbar-container' className="navbar">
 				<div id="main-navbar" className="container">
 					<NavLink onClick={this.hideDrawer} exact to="/">
 						Home

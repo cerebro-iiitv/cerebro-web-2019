@@ -6,7 +6,17 @@
 	position: fixed;
 	width: 100vw;
 	z-index: 20000;
-	background-color: $background-color;
+	background-color: rgba($background-color, 0);
+	transition: 0.15s ease-in;
+
+	.btn {
+		background-color: rgba($background-color, 0);
+
+		&:hover {
+			background-color: $color-primary;
+			color: $color-white;
+		}
+	}
 
 	a {
 		display: inline-block;
@@ -114,5 +124,18 @@
 
 	.drawer-visible {
 		left: 0rem !important;
+	}
+}
+
+.scrolled {
+	background-color: rgba($background-color, 0.95);
+
+	.btn {
+		background-color: rgba($background-color, 0.9);
+
+		&:hover {
+			background-color: $color-primary;
+			color: $color-white;
+		}
 	}
 }
