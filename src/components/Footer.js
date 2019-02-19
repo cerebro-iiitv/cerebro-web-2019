@@ -6,6 +6,10 @@ class Footer extends Component {
 		return (
 			<div className="footer-container">
 				<div className="footer">
+					<div className="institute-logo">
+						<img src={require('../img/institute-logo.svg')} height='100px' />
+						<span>Indian Institute of Information Technology, Vadodara</span>
+					</div>
 					<div className="links">
 						<h2 className="footer-header"><u className="footer-border">Links</u></h2>
 						<div className="footer-item"><a className="footer-link" href="/">Home</a></div>
