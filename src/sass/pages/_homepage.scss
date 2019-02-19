@@ -28,4 +28,17 @@
 		max-width: 100%;
 		padding: 3%;
 	}
+
+	.scrollButton {
+	    cursor: pointer;
+	    position: relative;
+	}
+
+	.scrollLink {
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+	}	
+
 }
