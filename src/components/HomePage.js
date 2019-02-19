@@ -17,8 +17,8 @@ const HomePage = () => (
 			<ParticlesBg id='particles-bg' />
 			<img src={Logo} alt="Logo" className="homepage__logo" />
 		</div>
-+       <div className="scrollButton" onClick = {scrollDown}>
-+       	<span className = "scrollLink">
+        <div className="scrollButton" onClick = {scrollDown}>
+        	<span className = "scrollLink">
 				<img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"/>
 			</span>
 		</div>
