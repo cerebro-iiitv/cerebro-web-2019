@@ -32,7 +32,7 @@
 		width: fit-content;
 		flex-direction: row;
 		justify-content: center;
-		z-index: unset;
+		z-index: 100000;
 
 		a {
 			display: inline-block;
