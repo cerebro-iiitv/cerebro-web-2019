@@ -3,13 +3,13 @@ import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 
 const hStyle = {
   marginBottom : '10px',
-  color: '#435eff',
+  color: '#5ec9f8',
   fontSize: '20px',
 };
 
 const h4Style = {
   marginBottom : '8px',
-  color: '#435eff',
+  color: '#5ec9f8',
   fontSize: '15px',
 }
 
