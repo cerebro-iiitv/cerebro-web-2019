@@ -12,7 +12,7 @@ class Signin extends Component {
 
 	render() {
 		return (
-			<button className="btn" onClick={this.props.signIn}>
+			<button className="signInBtn" onClick={this.props.signIn}>
 				<FontAwesome name="google" /> Sign In
 			</button>
 		);

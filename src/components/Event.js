@@ -29,30 +29,28 @@ class Event extends React.Component {
 			<main className="event">
 				<div className="container">
 					<Link to="/">
-						<button className="btn">Back</button>
+						<button className="btn event__backbtn">Back</button>
 					</Link>
 					<section className="event__header">
 						<div className="event__header-logo">
 							<img src={eventDetails.img} alt="Logo" />
 						</div>
 						<div className="event__header-name">{eventDetails.name}</div>
+						{!auth && <SignIn/>}
+						{auth && !registered && (
+								<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
+									Register
+								</button>
+						)}
+						{auth && registered && (
+							<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
+								Unregister
+							</button>
+						)}
 					</section>
 					<section className="event__content">
 						<div className="event__info">
-							<p>{eventDetails.description}</p>
-							<br/>
-							{!auth && <SignIn/>}
-							{auth && !registered && (
-								<button className="btn" onClick={() => registerForEvent(eventDetails)}>
-									Register
-								</button>
-							)}
-							{auth && registered && (
-								<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
-									Unregister
-								</button>
-							)}
-							<br/>
+							<h2 className="heading--secondary">{eventDetails.description}</h2>
 							<div className="event__details">
 								<p>
 									<span className="paragraph__highlight">Prizes Worth:</span> {eventDetails['prize-worth']}
@@ -72,16 +70,16 @@ class Event extends React.Component {
 								</p>
 							</div>
 							<div className="event__contact">
-								<h2 className="heading--secondary">Contact</h2>
+								<h2 className="heading--secondary"><u>Contact</u></h2>
 								{eventDetails.contact.map(user => (
 									<p key={user}>
-										{user.name} (+91 {user.phone}) - {user.role}
+										<span>{user.name}</span>, {user.role} { user.phone &&<span><span> - </span> <a href={`tel:${user.phone}`}><u>{user.phone}</u></a></span>}
 									</p>
 								))}
 							</div>
 						</div>
 						<div className="event__rules">
-							<h2 className="heading--secondary">Rules</h2>
+							<h2 className="heading--secondary"><u>Rules</u></h2>
 							<ul>
 								{eventDetails.rules.map(rule => (
 									<li key={rule} className="event__rule">

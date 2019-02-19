@@ -2,23 +2,31 @@
 	margin: 3rem 0;
 
 	&__header {
-		margin: 5rem 0;
+		margin: 1rem 0 5rem 0;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		flex-flow: column;
 		font-size: 2.5rem;
 	}
 
 	&__header-logo {
-		margin-right: 3rem;
-
 		img {
-			width: 11rem;
+			width: 24rem;
 		}
+	}
+
+	&__header-name {
+		font-size: 3.5rem;
 	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
+		u {
+			border-bottom: 0.1rem solid #5EC9F8;
+			text-decoration: none; 
+		}
 	}
 
 	&__info {
@@ -32,15 +40,39 @@
 			color: $color-white;
 			margin: 4rem 0;
 		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 400;
+		}
 	}
 
 	&__details {
 		line-height: 4.5rem;
-		margin-bottom: 8rem;
+		p {
+			span {
+				font-weight: bolder;
+			}
+		}
 	}
 
 	&__contact {
-		margin-bottom: 8rem;
+		line-height: 2;
+		p {
+			span {
+				font-weight: bolder;
+			}
+		}
+
+		a {
+			font-size: 1.8rem;
+			display: inline;
+			text-decoration: none;
+			u {
+				text-decoration: none;
+				border-bottom: 0.1rem dashed white;
+			}
+		}
 	}
 
 	&__rules {
@@ -61,6 +93,58 @@
 			display: inline-block;
 			width: 1rem;
 			margin-right: 1rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+
+		&__backbtn {
+			margin-left: -15%;
+		}
+
+		&__content {
+			display: flex;
+			flex-flow: column;
+			u {
+				border-bottom: 0.1rem solid #5EC9F8;
+				text-decoration: none; 
+			}
+		}
+
+		&__rules {
+			flex: 0 0 50%;
+			padding-left: 0rem;
+			border-left: 0px;
+			u {
+				margin-bottom: 0.1rem solid #5EC9F8;
+				text-decoration: none;
+			}
+		}
+
+		&__contact {
+			p {
+				span {
+					font-weight: bolder;
+				}
+			}
+
+			a {
+				font-size: 1.8rem;
+				text-decoration: none;
+				display: inline;
+				u {
+					text-decoration: none;
+					border-bottom: 0.1rem dashed white;
+				}
+			}
+		}
+
+		&__details {
+			p {
+				span {
+					font-weight: bolder;
+				}
+			}
 		}
 	}
 }
