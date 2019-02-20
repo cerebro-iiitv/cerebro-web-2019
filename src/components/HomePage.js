@@ -5,7 +5,7 @@ import ParticlesBg from './ParticlesBg'
 
 const scrollDown = () => {
 	window.scrollTo({
-		top: 780,
+		top: window.innerHeight - 70,
 		left: 0,
 		behavior: 'smooth'
 	});
