@@ -31,7 +31,8 @@
 
 	.scrollButton {
 	    cursor: pointer;
-	    position: relative;
+		position: relative;
+		z-index: 100;
 	}
 
 	.scrollLink {
