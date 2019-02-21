@@ -9,8 +9,9 @@
 	background-color: rgba($background-color, 0);
 	transition: 0.15s ease-in;
 
-	.btn {
+	.btn, .signInBtn {
 		background-color: rgba($background-color, 0);
+		margin-left: 2.3rem;
 
 		&:hover {
 			background-color: $color-primary;
@@ -29,6 +30,7 @@
 		transition: 0.1s linear;
 		border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
 		padding-bottom: 0.4rem;
+		margin-left: 2.3rem;
 
 		&:first-child {
 			margin-left: 0;
