@@ -17,7 +17,7 @@ const About = () => (
 				<h1 className="heading--primary">About Us</h1>
 				<p className="paragraph">
 					<span className="paragraph__highlight">Indian Institute of Information Technology, Vadodara</span> (IIIT-V)
-					is one of the newly formed IIIT by the Ministry of Human Resource Development (
+					is one of the newly formed IIITs by the Ministry of Human Resource Development (
 					<span className="paragraph__highlight">MHRD</span>) , Government of India under Public Private Partnership
 					(PPP) model. The partners in this project are Government of India, Government of Gujarat, Gujarat Energy
 					Research and Management Institute, Gujarat State Fertilizers and Chemicals Ltd. and Tata Consultancy Services.
@@ -29,7 +29,7 @@ const About = () => (
 					the <span className="paragraph__highlight">Technical Society of IIIT, Vadodara</span> and serves as a platform
 					for technophiles to showcase their creativity and intelligence. The festival aims to bring together great
 					minds through various activities like{' '}
-					<span className="paragraph__highlight">Technical Workshops, events, talks</span> and{' '}
+					<span className="paragraph__highlight">technical workshops, events, talks</span> and{' '}
 					<span className="paragraph__highlight">exhibitions</span>.
 				</p>
 			</div>

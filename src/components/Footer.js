@@ -13,7 +13,7 @@ class Footer extends Component {
 					<div className="links">
 						<h2 className="footer-header"><u className="footer-border">Links</u></h2>
 						<div className="footer-item"><a className="footer-link" href="/">Home</a></div>
-						<div className="footer-item"><a className="footer-link" href="http://iiitv.ac.in">Institute Site</a></div>
+						<div className="footer-item"><a className="footer-link" target="_blank" rel="noopener noreferrer" href="http://iiitv.ac.in">Institute Site</a></div>
 						<div className="footer-item"><a className="footer-link" href="/about">About</a></div>
 						<div className="footer-item"><a className="footer-link" href="/timeline">Timeline</a></div>
 					</div>
