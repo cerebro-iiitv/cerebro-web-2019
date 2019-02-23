@@ -18,3 +18,31 @@
     }
 }
 
+.timelinePdf {
+    display: inline-block;
+    color: rgba($color-primary, 0.9);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.1s linear;
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
+    padding-bottom: 0.4rem;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 12px;
+    font-size: 1.6rem;
+
+    &:hover {
+        color: rgba(lighten($color-primary, 10%), 1);
+        border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+    }
+
+    &.active {
+        color: $color-primary;
+        border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+    }
+}
+

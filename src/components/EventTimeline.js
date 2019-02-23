@@ -14,7 +14,11 @@ const h4Style = {
 }
 
 const EventTimeline = () => (
-  <Timeline lineColor={'#ddd'}>
+  <div>
+    <div>
+    <a href="https://github.com/cerebro-iiitv/cerebro-web-2019/files/2896857/timeline.pdf" className="timelinePdf">Download Timeline</a>
+    </div>
+    <Timeline lineColor={'#ddd'}>
   <TimelineItem
     key="001"
     dateText="2019-03-02 16:30"
@@ -207,6 +211,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
 </Timeline>
+  </div>
 );
 
 export default EventTimeline;
