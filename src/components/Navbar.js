@@ -36,7 +36,7 @@ class Navbar extends Component {
 	componentDidMount() {
 		document.addEventListener('scroll', e => {
 			let elem = document.getElementById('navbar-container')
-			if (window.pageYOffset > 100) {
+			if (window.pageYOffset > 38) {
 				if (!elem.classList.contains('scrolled')) {
 					elem.classList.add('scrolled')
 				}

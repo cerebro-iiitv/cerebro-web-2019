@@ -324,3 +324,22 @@
 		}
 	}
 }
+
+.react-tooltip {
+	background-color: black !important;
+	opacity: 1!important;
+	font-size: 15px!important;
+
+	&:hover {
+		visibility: visible !important;
+		opacity: 1!important;
+	}
+
+	&.place-top {
+		&:after {
+			border-top-color: black !important;
+			border-top-style: solid !important;
+			border-top-width: 6px !important;
+		}
+ }
+}

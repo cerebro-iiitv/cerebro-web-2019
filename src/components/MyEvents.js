@@ -6,6 +6,7 @@ import Loaderx from './Loader';
 import { unregisterFromEvent } from '../actions/eventActions';
 import { fetchUser } from '../actions/authActions';
 import { loadUserPhone, saveUserPhone } from '../actions/userPhoneActions';
+import ReactTooltip from 'react-tooltip';
 
 class MyEvents extends Component {
 	constructor(props) {
@@ -73,7 +74,7 @@ class MyEvents extends Component {
 													</td>
 													<td className="td-starts">{e['start-time']}</td>
 													<td className="td-action">
-														<FontAwesome name="trash" size="1x" onClick={() => unregisterFromEvent(e)} />
+														<FontAwesome data-tip='Unregister' name="trash" size="1x" onClick={() => unregisterFromEvent(e)} />
 													</td>
 												</tr>
 											);
@@ -84,6 +85,7 @@ class MyEvents extends Component {
 						</div>
 					</div>
 				</div>
+				<ReactTooltip className='react-tooltip' effect='solid' delayShow={300} />
 			</div>
 		);
 	}
