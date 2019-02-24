@@ -3,14 +3,26 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import SignIn from './SignIn';
 import { signOut } from '../actions/authActions';
+import Modal from "react-responsive-modal";
 
 class Navbar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			drawerOut: false
+			drawerOut: false,
+			open: false
 		};
 	}
+
+	onOpenModal = () => {
+		this.setState({ open: true });
+	};
+	
+	onCloseModal = () => {
+		this.setState({ 
+			open: false,
+		 });
+	};
 
 	showDrawer = () => {
 		this.setState({
@@ -52,8 +64,10 @@ class Navbar extends Component {
 
 	render() {
 		const { auth, signOut } = this.props;
+		const { open } = this.state;
 		return (
-			<nav id='navbar-container' className="navbar">
+			<div>
+				<nav id='navbar-container' className="navbar">
 				<div id="main-navbar" className="container">
 					<NavLink onClick={this.hideDrawer} exact to="/">
 						Home
@@ -61,6 +75,7 @@ class Navbar extends Component {
 					<NavLink onClick={this.hideDrawer} to="/about">About</NavLink>
 					<NavLink onClick={this.hideDrawer} to="/team">Team</NavLink>
 					<NavLink onClick={this.hideDrawer} to="/timeline">Timeline</NavLink>
+					<span className="brochure" onClick={this.onOpenModal}>Brochure</span>					
 					{auth && <NavLink onClick={this.hideDrawer} to="/dashboard">My Events</NavLink>}
 					{auth ? (
 						<button className="btn" onClick={signOut}>
@@ -95,6 +110,7 @@ class Navbar extends Component {
 					<NavLink onClick={this.hideDrawer} to="/timeline">
 						Timeline
 					</NavLink>
+					<a className="mobileBrochure brochure" href="https://github.com/cerebro-iiitv/cerebro-web-2019/files/2896770/BROCHURE.pdf">Brochure</a>
 					{auth && <NavLink onClick={this.hideDrawer} to="/dashboard">
 						My Events
 					</NavLink>}
@@ -107,6 +123,11 @@ class Navbar extends Component {
 					)}
 				</div>
 			</nav>
+			
+			<Modal open={open} onClose={this.onCloseModal} center>
+				<embed src= "https://raw.githubusercontent.com/samagragupta/cerebro-web-2019/test/assets/BROCHURE.pdf" width= "700" height= "750" />
+        	</Modal>
+			</div>
 		);
 	}
 }

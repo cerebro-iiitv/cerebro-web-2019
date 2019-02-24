@@ -5,9 +5,34 @@
 	align-items: center;
 	position: fixed;
 	width: 100vw;
-	z-index: 20000;
+	z-index: 200;
 	background-color: rgba($background-color, 0);
 	transition: 0.15s ease-in;
+
+	.brochure {
+		display: inline-block;
+		color: rgba(94, 201, 248, 0.9);
+		font-weight: 800;
+		letter-spacing: 1px;
+		text-decoration: none;
+		margin: 0 2.3rem;
+		text-transform: uppercase;
+		-webkit-transition: 0.1s linear;
+		transition: 0.1s linear;
+		border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
+		padding-bottom: 0.4rem;
+		cursor: pointer;
+	}
+
+	.brochure:hover {
+		color: rgba(lighten($color-primary, 10%), 1);
+		border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+	}
+
+	.brochure.active {
+		color: $color-primary;
+		border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+	}
 
 	.btn, .signInBtn {
 		background-color: rgba($background-color, 0);
@@ -140,4 +165,19 @@
 			color: $color-white;
 		}
 	}
+}
+
+.styles_closeIcon__1QwbI {
+	cursor: pointer;
+}
+
+.styles_closeButton__20ID4 {
+	top: -2px;
+	right: -33px;
+	background-color: #5ec9f8;
+	border-radius: 30%;
+}
+
+.styles_modal__gNwvD {
+	padding: 0;
 }
