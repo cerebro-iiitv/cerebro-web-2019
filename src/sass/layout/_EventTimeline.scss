@@ -32,8 +32,8 @@
     margin-left: -50px;
     font-size: 1.6rem;
     border: 1px solid #5ec9f8;
-    padding: 10px;
-    border-radius: 25%;
+    padding: 10px 13px;
+    border-radius: 50%;
 
     &:hover {
         background-color: $color-white;
@@ -41,7 +41,12 @@
     }
 
     @media screen and (max-width: 840px) {
-        left: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 42px;
+        height: 42px;
+        left: 0;
+        right: 0;
     }
 }
 
