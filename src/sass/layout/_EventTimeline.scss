@@ -18,3 +18,35 @@
     }
 }
 
+.timelinePdf {
+    display: inline-block;
+    color: rgba($color-primary, 0.9);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.1s linear;
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0);
+    position: absolute;
+    left: 95%;
+    margin-left: -50px;
+    font-size: 1.6rem;
+    border: 1px solid #5ec9f8;
+    padding: 10px 13px;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+    @media screen and (max-width: 840px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 42px;
+        height: 42px;
+        left: 0;
+        right: 0;
+    }
+}
+

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import  download  from '../img/download.svg';
+
 
 const hStyle = {
   marginBottom : '10px',
@@ -14,7 +16,13 @@ const h4Style = {
 }
 
 const EventTimeline = () => (
-  <Timeline lineColor={'#ddd'}>
+  <div>
+    <div>
+    <a href="https://github.com/cerebro-iiitv/cerebro-web-2019/files/2896857/timeline.pdf" className="timelinePdf">
+      <img src={download} alt="download Logo" className="download-icons__icon" />
+    </a>
+    </div>
+    <Timeline lineColor={'#ddd'}>
   <TimelineItem
     key="001"
     dateText="2019-03-02 16:30"
@@ -207,6 +215,7 @@ const EventTimeline = () => (
     </p>
   </TimelineItem>
 </Timeline>
+  </div>
 );
 
 export default EventTimeline;
