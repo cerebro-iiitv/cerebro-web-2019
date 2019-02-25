@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import SignIn from './SignIn';
 import { signOut } from '../actions/authActions';
 import Modal from "react-responsive-modal";
+import { loadAssets } from '../actions/assetsActions';
 
 class Navbar extends Component {
 	constructor(props) {
@@ -56,6 +57,7 @@ class Navbar extends Component {
 				elem.classList.remove('scrolled')
 			}
 		})
+		this.props.loadAssets();
 	}
 
 	componentDidUpdate() {
@@ -63,8 +65,10 @@ class Navbar extends Component {
 	}
 
 	render() {
-		const { auth, signOut } = this.props;
+		const { auth, signOut, assets } = this.props;
+		console.log('PROPS',this.props)
 		const { open } = this.state;
+		console.log('ASSETS', assets.assets)
 		return (
 			<div>
 				<nav id='navbar-container' className="navbar">
@@ -110,7 +114,8 @@ class Navbar extends Component {
 					<NavLink onClick={this.hideDrawer} to="/timeline">
 						Timeline
 					</NavLink>
-					<a className="mobileBrochure brochure" href="https://github.com/cerebro-iiitv/cerebro-web-2019/files/2896770/BROCHURE.pdf">Brochure</a>
+					{/* <a className="mobileBrochure brochure" href={assets.assets.brochureDownload}>Brochure</a> */}
+					{assets.assets && <a className="mobileBrochure brochure" href={assets.assets.brochureDownload}>Brochure</a>}
 					{auth && <NavLink onClick={this.hideDrawer} to="/dashboard">
 						My Events
 					</NavLink>}
@@ -125,18 +130,19 @@ class Navbar extends Component {
 			</nav>
 			
 			<Modal open={open} onClose={this.onCloseModal} center>
-				<embed src= "https://raw.githubusercontent.com/samagragupta/cerebro-web-2019/test/assets/BROCHURE.pdf" width= "700" height= "750" />
+				{assets.assets && <embed src={assets.assets.brochure} width= "700" height= "750" />}
         	</Modal>
 			</div>
 		);
 	}
 }
 
-const mapStateToProps = ({ auth }) => {
-	return { auth };
+const mapStateToProps = state => {
+	console.log(state)
+	return { auth: state.auth, assets: state.assets };
 };
 
 export default connect(
 	mapStateToProps,
-	{ signOut }
+	{ signOut, loadAssets }
 )(Navbar);
