@@ -11,6 +11,10 @@
     "team": {
       ".read": "true",
       ".write": "false"
+    },
+    "assets": {
+      ".read": "true",
+      ".write": "false"
     }
   }
 }
