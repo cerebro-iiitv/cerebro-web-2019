@@ -66,9 +66,7 @@ class Navbar extends Component {
 
 	render() {
 		const { auth, signOut, assets } = this.props;
-		console.log('PROPS',this.props)
 		const { open } = this.state;
-		console.log('ASSETS', assets.assets)
 		return (
 			<div>
 				<nav id='navbar-container' className="navbar">
@@ -138,7 +136,6 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log(state)
 	return { auth: state.auth, assets: state.assets };
 };
 
