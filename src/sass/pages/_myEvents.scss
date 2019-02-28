@@ -145,6 +145,8 @@
 					display: inline-block;
 					box-sizing: border-box;
 					font-family: 'Source Sans Pro', sans-serif;
+					border: 2px solid $background-color-2;
+					transition: 0.15s linear;
 				}
 
 				input[type='submit'] {

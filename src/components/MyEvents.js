@@ -21,9 +21,38 @@ class MyEvents extends Component {
 		}
 	}
 
+	validateForm = () => {
+		return new Promise((resolve, reject) => {
+			let phoneNo = this.refs.phone.value
+			if (phoneNo.length !== 10) {
+				alert('Please enter a 10 digit phone number')
+				reject()
+			} else if (isNaN(phoneNo)) {
+				alert('Value should be numeric.')
+				phoneNo = ""
+				reject()
+			} else {
+				resolve()
+			}
+		})
+	}
+
+	onChange = e => {
+		if (e.target.value.length !== 10 || isNaN(e.target.value)) {
+			this.refs.phone.style.border = "2px solid #e60000"
+		} else {
+			this.refs.phone.style.border = "2px solid #40ff00"
+		}
+	}
+
 	addPhone(event) {
 		event.preventDefault();
-		this.props.saveUserPhone(this.refs.phone.value);
+		this.validateForm()
+			.then(() => {
+				this.props.saveUserPhone(this.refs.phone.value);
+				this.refs.phone.value = ""
+			})
+			.catch(() => console.log('Resolve error.'))		
 	}
 
 	render() {
@@ -44,9 +73,9 @@ class MyEvents extends Component {
 								<p>Mobile No. : {userPhone.phone}</p>
 							</div>
 						</div>
-						<div className="user-contact">
+						<div ref="userContactField" className="user-contact">
 							<form onSubmit={this.addPhone}>
-								<input type="text" placeholder="Mobile" ref="phone" />
+								<input onChange={this.onChange} type="text" placeholder="Mobile" ref="phone" />
 								<input type="submit" value="Save" />
 							</form>
 						</div>
