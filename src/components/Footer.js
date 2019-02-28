@@ -5,9 +5,19 @@ class Footer extends Component {
 	render() {
 		return (
 			<div className="footer-container">
+				<div className="footer-sponsors">
+					<h2 className="footer-header"><u className="footer-border">Our Sponsors</u></h2>
+					<div>
+						<img alt="SBI Logo" src={require('../img/sponsors/sbi.png')} />
+						<img alt="Byju's Logo" src={require('../img/sponsors/byju.png')} />
+						<img alt="Endeavor Logo" src={require('../img/sponsors/endeavor.png')} />
+						<img alt="Coding Blocks Logo" src={require('../img/sponsors/codingblocks.png')} />
+					</div>
+				</div>
+
 				<div className="footer">
 					<div className="institute-logo">
-						<img src={require('../img/institute-logo.svg')} height='100px' />
+						<img alt="IIITV Logo" src={require('../img/institute-logo.svg')} height='100px' />
 						<span>Indian Institute of Information Technology, Vadodara</span>
 					</div>
 					<div className="links">

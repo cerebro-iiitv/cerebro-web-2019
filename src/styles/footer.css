@@ -74,6 +74,36 @@
     margin-right: 10px;
 }
 
+.footer-sponsors {
+    padding: 25px 0px;
+    border-bottom: 1px solid #292929;
+}
+
+.footer-sponsors h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.footer-sponsors div {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+.footer-sponsors div img {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
+    margin: 10px 20px;
+}
+
 @media (max-width: 600px) {
     .footer {
         display: flex;
