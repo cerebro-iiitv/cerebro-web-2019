@@ -51,6 +51,7 @@ class MyEvents extends Component {
 			.then(() => {
 				this.props.saveUserPhone(this.refs.phone.value);
 				this.refs.phone.value = ""
+				this.refs.phone.style.border = "2px solid #292929"
 			})
 			.catch(() => console.log('Resolve error.'))		
 	}
