@@ -15,6 +15,10 @@
     "assets": {
       ".read": "true",
       ".write": "false"
+    },
+    "timeline": {
+      ".read": "true",
+      ".write": "false"
     }
   }
 }
