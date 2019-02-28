@@ -8,10 +8,10 @@ class Footer extends Component {
 				<div className="footer-sponsors">
 					<h2 className="footer-header"><u className="footer-border">Our Sponsors</u></h2>
 					<div>
-						<img alt="SBI Logo" src={require('../img/sponsors/sbi.png')} />
-						<img alt="Byju's Logo" src={require('../img/sponsors/byju.png')} />
-						<img alt="Endeavor Logo" src={require('../img/sponsors/endeavor.png')} />
-						<img alt="Coding Blocks Logo" src={require('../img/sponsors/codingblocks.png')} />
+						<a target='_blank' rel="noopener noreferrer" href='https://www.onlinesbi.com/'><img alt="SBI Logo" src={require('../img/sponsors/sbi.png')} /></a>
+						<a target='_blank' rel="noopener noreferrer" href='https://byjus.com/'><img alt="Byju's Logo" src={require('../img/sponsors/byju.png')} /></a>
+						<a target='_blank' rel="noopener noreferrer" href='https://www.endeavorcareers.com/'><img alt="Endeavor Logo" src={require('../img/sponsors/endeavor.png')} /></a>
+						<a target='_blank' rel="noopener noreferrer" href='https://codingblocks.com/'><img alt="Coding Blocks Logo" src={require('../img/sponsors/codingblocks.png')} /></a>
 					</div>
 				</div>
 
