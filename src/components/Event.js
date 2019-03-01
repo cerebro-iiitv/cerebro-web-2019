@@ -37,10 +37,10 @@ class Event extends React.Component {
 						</div>
 						<div className="event__header-name">{eventDetails.name}</div>
 						{!auth && <SignIn/>}
-						{auth && !registered && (
-								<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
-									Register
-								</button>
+						{auth && !registered && !eventDetails.registrationClosed && (
+							<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
+								Register
+							</button>
 						)}
 						{auth && registered && (
 							<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>

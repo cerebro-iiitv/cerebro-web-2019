@@ -18,7 +18,7 @@ export const loadEvents = events => dispatch => {
 export const registerForEvent = event => dispatch => {
 	let user = getState().auth;
 	// console.log(user);
-	if (!user) {
+	if (!user || event.registrationClosed) {
 		return;
 	}
 	firebase
