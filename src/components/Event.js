@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { registerForEvent, unregisterFromEvent } from '../actions/eventActions';
 import SignIn from './SignIn';
 import Loaderx from './Loader';
 import ReactHtmlParser from 'react-html-parser';
@@ -15,8 +14,6 @@ class Event extends React.Component {
 	render() {
 		const {
 			event: { events, loadingEvents },
-			registerForEvent,
-			unregisterFromEvent,
 			auth,
 			match
 		} = this.props;
@@ -44,8 +41,8 @@ class Event extends React.Component {
 							</button>
 						)}
 						{auth && registered && (
-							<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
-								Unregister
+							<button disabled className="btn">
+								Registrations Closed
 							</button>
 						)}
 					</section>
@@ -105,8 +102,4 @@ const mapStateToProps = state => {
 
 export default connect(
 	mapStateToProps,
-	{
-		registerForEvent,
-		unregisterFromEvent
-	}
 )(Event);
