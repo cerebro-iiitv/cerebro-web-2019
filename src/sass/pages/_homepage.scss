@@ -27,8 +27,8 @@
 	.homepage__logo {
 		max-width: 100%;
 		padding: 3%;
-		top: -15%;
-		position: relative;
+		// top: -15%;
+		// position: relative;
 	}
 
 	.scrollButton {
@@ -46,47 +46,47 @@
 
 }
 
-.react-countdown {
-	display: inline-block;
-	margin: 0;
-	top: 66%;
-	left: 0;
-	right: 0;
-	position: absolute;
-	padding: 0;
-}
+// .react-countdown {
+// 	display: inline-block;
+// 	margin: 0;
+// 	top: 66%;
+// 	left: 0;
+// 	right: 0;
+// 	position: absolute;
+// 	padding: 0;
+// }
 
-.countdown {
-	text-align: center;
-}
+// .countdown {
+// 	text-align: center;
+// }
 
-.react-countdown .digit {
-	font-size: 52px !important;
-	color: #c6c6c6;
-}
-.react-countdown .text {
-	font-size: 25px !important;
-	color: rgba(94, 201, 248, 0.9);
-}
+// .react-countdown .digit {
+// 	font-size: 52px !important;
+// 	color: #c6c6c6;
+// }
+// .react-countdown .text {
+// 	font-size: 25px !important;
+// 	color: rgba(94, 201, 248, 0.9);
+// }
 
-.react-countdown li:after {
-	right: -20px;
-}
+// .react-countdown li:after {
+// 	right: -20px;
+// }
 
-.react-countdown li {
-	margin: 0 15px !important;
-}
+// .react-countdown li {
+// 	margin: 0 15px !important;
+// }
 
-.start-heading {
-	position: absolute;
-    top: 60%;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-	margin-right: auto;
-	color: rgba(94, 201, 248, 0.9);
-}
+// .start-heading {
+// 	position: absolute;
+//     top: 60%;
+//     right: 0;
+//     left: 0;
+//     margin-left: auto;
+// 	margin-right: auto;
+// 	color: rgba(94, 201, 248, 0.9);
+// }
 
-.start-text {
-	text-align: center;
-}
+// .start-text {
+// 	text-align: center;
+// }
